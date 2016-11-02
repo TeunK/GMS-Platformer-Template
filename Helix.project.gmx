@@ -5,9 +5,23 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_Solid</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\super.gml</script>
+  </scripts>
+  <objects name="objects">
+    <object>objects\Player</object>
+    <object>objects\PlayerPlatformer</object>
+    <object>objects\Solid</object>
+    <object>objects\Floor</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\room0</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>

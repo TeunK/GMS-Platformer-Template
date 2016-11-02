@@ -60,9 +60,9 @@ vspd = 0;
           <argument>
             <kind>1</kind>
             <string>// Check keyboard input
-var RKEY = keyboard_check(vk_right);
-var LKEY = keyboard_check(vk_left);
-var UKEY = keyboard_check(vk_up);
+var RKEY = RKEY();
+var LKEY = LKEY();
+var UKEY = UKEY();
 
 // Check for ground
 if (place_meeting(x, y+1, Solid)) {

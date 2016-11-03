@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_Solid</sprite>
+    <sprite>sprites\spr_PlatformPlayer</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -14,6 +15,7 @@
     <script>scripts\super.gml</script>
     <scripts name="user_input">
       <script>scripts\UKEY.gml</script>
+      <script>scripts\DKEY.gml</script>
       <script>scripts\UKEY_RELEASED.gml</script>
       <script>scripts\RKEY.gml</script>
       <script>scripts\LKEY.gml</script>

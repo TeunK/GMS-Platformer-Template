@@ -6,10 +6,16 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_Solid</sprite>
     <sprites name="player_parts">
       <sprite>sprites\spr_PlatformPlayerEyes</sprite>
       <sprite>sprites\spr_PlatformPlayerBody</sprite>
+    </sprites>
+    <sprites name="room">
+      <sprite>sprites\spr_Floor</sprite>
+      <sprite>sprites\spr_Ceiling</sprite>
+      <sprite>sprites\spr_Solid</sprite>
+      <sprite>sprites\spr_LWall</sprite>
+      <sprite>sprites\spr_RWall</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -33,6 +39,9 @@
     <objects name="room">
       <object>objects\Solid</object>
       <object>objects\Floor</object>
+      <object>objects\LWall</object>
+      <object>objects\RWall</object>
+      <object>objects\Ceiling</object>
     </objects>
   </objects>
   <rooms name="rooms">

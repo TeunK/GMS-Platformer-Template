@@ -30,6 +30,10 @@
       <script>scripts\LKEY.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\ft_ui_msgbox</font>
+    <font>fonts\ft_ui_small</font>
+  </fonts>
   <objects name="objects">
     <objects name="players">
       <object>objects\PlayerEcho</object>
@@ -42,6 +46,9 @@
       <object>objects\LWall</object>
       <object>objects\RWall</object>
       <object>objects\Ceiling</object>
+    </objects>
+    <objects name="UI">
+      <object>objects\MessageBox</object>
     </objects>
   </objects>
   <rooms name="rooms">

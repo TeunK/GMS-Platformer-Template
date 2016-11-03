@@ -89,6 +89,7 @@
     <instance objName="LWall" x="512" y="320" name="inst_A8D8D27D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="LWall" x="512" y="288" name="inst_5038234C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="LWall" x="512" y="256" name="inst_EB2B3E1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="MessageBox" x="32" y="32" name="inst_2D31213E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

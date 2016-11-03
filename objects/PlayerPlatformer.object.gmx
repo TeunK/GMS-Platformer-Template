@@ -31,7 +31,7 @@ GRAVITY = 1;
 TERMINAL_VELOCITY = 10;
 FRICTION = 1;
 JELLYNESS = 0.4;
-ECHO_DURATION = 5;
+ECHO_DURATION = 1;
 ECHO_AGING_SPEED = 0.05
 
 Y_BOTTOM = y
@@ -102,7 +102,6 @@ if (place_meeting(x, y+1, Solid)) {
         vspd = -JUMPHEIGHT;
         draw_yscale += JELLYNESS;
         draw_xscale -= JELLYNESS;
-        ghosting = true;
     }
 } else {
     // Gravity
@@ -161,7 +160,6 @@ if (place_meeting(x, y+vspd, Solid)) {
         y += sign(vspd);
     }
     vspd = 0;
-    ghosting = false;
 }
 
 // Move vertically

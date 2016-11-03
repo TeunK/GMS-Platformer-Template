@@ -29,6 +29,7 @@
 JUMPHEIGHT = 14;
 GRAVITY = 1;
 TERMINAL_VELOCITY = 10;
+FRICTION = 1;
 
 Y_BOTTOM = y + (sprite_get_height(sprite_index)/2)
 Y_TOP = y - (sprite_get_height(sprite_index)/2)
@@ -59,17 +60,12 @@ vspd = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Check keyboard input
-var RKEY = RKEY();
-var LKEY = LKEY();
-var UKEY = UKEY();
-
-// Check for ground
+            <string>// Check for ground
 if (place_meeting(x, y+1, Solid)) {
     vspd = 0;
     
     // Jumping
-    if (UKEY) {
+    if (UKEY()) {
         vspd = -JUMPHEIGHT;
     }
 } else {
@@ -77,21 +73,39 @@ if (place_meeting(x, y+1, Solid)) {
     if (vspd &lt; TERMINAL_VELOCITY) {
         vspd += GRAVITY;
     }
+    
+    if (UKEY_RELEASED() &amp;&amp; vspd &lt; -(JUMPHEIGHT/2)) {
+        vspd = -(JUMPHEIGHT/2);
+    }
 }
 
 // Moving right
-if (LKEY) {
-    hspd = -MOVESPEED
+if (LKEY()) {
+    if (hspd &gt; -MOVESPEED) {
+        hspd -= FRICTION;
+    } else {
+        hspd = -MOVESPEED
+    }
 }
 
 // Moving left
-if (RKEY) {
-    hspd = MOVESPEED;
+if (RKEY()) {
+    if (hspd &lt; MOVESPEED) {
+        hspd += FRICTION;
+    } else {
+        hspd = MOVESPEED;
+    }
 }
 
 // Check for not moving
-if ((!RKEY &amp;&amp; !LKEY) || (RKEY &amp;&amp; LKEY)) {
-    hspd = 0;
+if ((!RKEY() &amp;&amp; !LKEY()) || (RKEY() &amp;&amp; LKEY())) {
+    if (hspd != 0) {
+        if (hspd &lt; 0) {
+            hspd += FRICTION;
+        } else {
+            hspd -= FRICTION;
+        }
+    }
 }
 
 // Horizontal collisions

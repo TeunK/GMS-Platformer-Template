@@ -14,6 +14,7 @@
     <script>scripts\super.gml</script>
     <scripts name="user_input">
       <script>scripts\UKEY.gml</script>
+      <script>scripts\UKEY_RELEASED.gml</script>
       <script>scripts\RKEY.gml</script>
       <script>scripts\LKEY.gml</script>
     </scripts>

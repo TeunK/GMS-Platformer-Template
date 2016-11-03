@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>MESSAGE = "O Hi! this is a test message to see how well the line breaking works. There are no real newline characters included in this message so any time a new line starts, this is all calculated by the program :)";
+
 HINT = "[Press &lt;spacebar&gt; to continue.]";
 FULL_MESSAGE = MESSAGE + " - " + HINT;
 

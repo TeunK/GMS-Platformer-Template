@@ -25,11 +25,15 @@
     </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\Player</object>
-    <object>objects\PlayerPlatformer</object>
-    <object>objects\Solid</object>
-    <object>objects\Floor</object>
-    <object>objects\PlayerEcho</object>
+    <objects name="players">
+      <object>objects\PlayerEcho</object>
+      <object>objects\PlayerPlatformer</object>
+      <object>objects\Player</object>
+    </objects>
+    <objects name="room">
+      <object>objects\Solid</object>
+      <object>objects\Floor</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

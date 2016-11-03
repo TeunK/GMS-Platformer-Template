@@ -101,9 +101,9 @@ if (RKEY()) {
 if ((!RKEY() &amp;&amp; !LKEY()) || (RKEY() &amp;&amp; LKEY())) {
     if (hspd != 0) {
         if (hspd &lt; 0) {
-            hspd += FRICTION;
+            hspd += min(FRICTION, -hspd);
         } else {
-            hspd -= FRICTION;
+            hspd -= min(FRICTION, hspd);
         }
     }
 }

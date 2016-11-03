@@ -31,6 +31,8 @@ GRAVITY = 1;
 TERMINAL_VELOCITY = 10;
 FRICTION = 1;
 JELLYNESS = 0.4;
+ECHO_DURATION = 5;
+ECHO_AGING_SPEED = 0.05
 
 Y_BOTTOM = y
 Y_CENTER = y - (sprite_get_height(sprite_index/2));
@@ -43,6 +45,7 @@ hspd = 0;
 vspd = 0;
 draw_yscale = 1;
 draw_xscale = 1;
+ghosting = false;
 
 counter=0;
 </string>
@@ -99,6 +102,7 @@ if (place_meeting(x, y+1, Solid)) {
         vspd = -JUMPHEIGHT;
         draw_yscale += JELLYNESS;
         draw_xscale -= JELLYNESS;
+        ghosting = true;
     }
 } else {
     // Gravity
@@ -157,6 +161,7 @@ if (place_meeting(x, y+vspd, Solid)) {
         y += sign(vspd);
     }
     vspd = 0;
+    ghosting = false;
 }
 
 // Move vertically
@@ -207,7 +212,19 @@ X_RIGHT = x + (sprite_get_width(sprite_index)/2)
 
 // Draw the player
 draw_sprite_ext(spr_PlatformPlayerBody, image_index, x, y, draw_xscale, draw_yscale, image_angle, image_blend, image_alpha);
-draw_sprite(spr_PlatformPlayerEyes, counter, X_CENTER, Y_CENTER);
+draw_sprite(spr_PlatformPlayerEyes, floor(counter/4), X_CENTER, Y_CENTER);
+
+//..move this elsewhere after completion
+if (ghosting &amp;&amp; counter % ECHO_DURATION == 0) {
+    var echo = instance_create(x,y,PlayerEcho);
+    with (echo) {
+        AGING_SPEED = other.ECHO_AGING_SPEED;
+        img_index = floor(other.counter/4)
+        draw_xscale = other.draw_xscale;
+        draw_yscale = other.draw_yscale;
+    }
+}
+
 </string>
           </argument>
         </arguments>

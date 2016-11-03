@@ -29,6 +29,7 @@
     <object>objects\PlayerPlatformer</object>
     <object>objects\Solid</object>
     <object>objects\Floor</object>
+    <object>objects\PlayerEcho</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

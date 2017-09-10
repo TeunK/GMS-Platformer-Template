@@ -2,13 +2,13 @@
 
 A Ready-To-Go Platformer Game Template for [GameMaker Studio](http://www.yoyogames.com/gamemaker)
 
-##Table of Contents
+## Table of Contents
 
 - [Content](#content)
 - [Examples](#examples)
 - [Startup](#startup)
 
-##Content
+## Content
 
 - *Fully implemented platformer player* object with smooth platform movement and sprite modification, plus the option to generate player movement trace by toggling `ghosting`.
 
@@ -16,7 +16,7 @@ A Ready-To-Go Platformer Game Template for [GameMaker Studio](http://www.yoyogam
 
 - *Message box* to display messages, automatically adaptive to the assigned message size.
 
-##Examples
+## Examples
 
 `With ghosting=false:`
 
@@ -27,6 +27,6 @@ A Ready-To-Go Platformer Game Template for [GameMaker Studio](http://www.yoyogam
 
 ![ingame map player with ghosting](https://i.gyazo.com/347844997a4e2303e015b30780c019d8.gif)
 
-##Startup
+## Startup
 
 Simply open the `Helix.project.gmx` project in [GameMaker Studio](http://www.yoyogames.com/gamemaker)
